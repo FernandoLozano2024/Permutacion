@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutaciones Circulares</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #98FB98;
+            /* Verde claro */
+        }
+        
+        .circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #1E90FF;
+            /* Cambio del color del borde */
+            border-radius: 50%;
+            margin: 20px auto;
+            display: inline-block;
+            vertical-align: top;
+            margin: 20px;
+        }
+        
+        .circle .element {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #1E90FF;
+            /* Cambio del color del borde */
+            border-radius: 50%;
+            background-color: #6495ED;
+            /* Cambio del color de fondo */
+        }
+        
+        .circle .element:nth-child(2) {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle .element:nth-child(3) {
+            top: 25%;
+            left: 87%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle .element:nth-child(4) {
+            top: 75%;
+            left: 87%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle .element:nth-child(5) {
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle .element:nth-child(6) {
+            top: 75%;
+            left: 13%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle .element:nth-child(7) {
+            top: 25%;
+            left: 13%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Permutaciones Circulares de 6 Personas en 6 Lugares</h1>
+    <button class="btn btn-primary" onclick="calculatePermutations()">Calcular Permutaciones</button>
+    <p id="result"></p>
+    <ul id="permutations-list"></ul>
+    <div id="circle-representations"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
